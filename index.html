@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./custom.css">
+    <meta charset="UTF-8">
+    <title>Wiki-Navigator - Canada</title>
+  </head>
+  <body style="height:100%">
+	<container>
+		<row>
+			<div class="col-xs-12">
+				<h1>Wiki-Navigator - Voyageur Edition (Canada)</h1>
+				<h4>
+					<strong>Your Next Challenge: </strong> This is the northernmost city in Canada that can be reached by rail. Navigate to this city's Wikipedia page from the Canada Wikipedia page in less than four links.
+				</h4>
+				<br/>
+			</div>
+		</row>
+		<row>
+			<div class="col-xs-3">
+				<div class="col-xs-12 half-height">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation"><a href="#">Canada</a></li>
+						<li role="presentation"><a href="#">Manitoba</a></li>
+						<li role="presentation" class="active"><a href="#">Churchill, Manitoba</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 half-height">
+					<h4>Solved <strong>24</strong> of 150 puzzles</h4>
+					<h4><strong>Current Rank: </strong> Coyote</h4>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Howl_%28cropped%29.jpg" /> 
+				</div>
+			</div>
+			<div class="col-xs-9 webview-div" >
+				<webview src="https://en.wikipedia.org/wiki/Canada" style="height:100%" preload="stripPage.js" autosize minwidth="800" minheight="600"></webview>
+			</div>
+		</row>
+	</container>
+  </body>
+	
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js');
+	
+  </script>
+</html>
