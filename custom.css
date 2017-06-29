@@ -1,17 +1,64 @@
 
 
-.webview-div {
-	height: calc(100vh - 138.5px);
-	border-style: inset;
+
+webview{
+	height:100%;
+	width:100%;
 }
 
+.webview-div {
+	height: calc(100vh - 222px);
+}
 
-.half-height {    
-	height: calc((100vh - 138.5px)/2);
+.small-pad{
+	padding: 5px 5px 5px 5px;
+}
+
+.panel-body-webview{
+	padding: 5px 5px 28px 5px;
+}
+
+.half-height {
+	height: calc((100vh - 175px)/2);
 	overflow: auto;
+}
+
+.panel{
+	margin-bottom: 3px;
 }
 
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.electron-in-page-search-window {
+  position: fixed;
+  top: 120px;
+  right: 0;
+  border: solid grey 1px;
+  background-color: white;
+  width: 300px;
+  height: 36px;
+}
+
+/*
+ * .search-inactive is added to search window <webview> when the window
+ * is inactive.
+ */
+.search-inactive {
+  visibility: hidden;
+}
+
+/*
+ * .search-inactive is added to search window <webview> when the window
+ * is active.
+ */
+.search-active {
+  visibility: visible;
+}
+
+.main-header{
+    background-color: #222;
+    color: #a94442;
 }
