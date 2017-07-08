@@ -18,35 +18,37 @@
       			       Navigation History
               </div>
               <div class="panel-body half-height">
-      					<ul class="nav nav-pills nav-stacked">
+      					<ul id="history-panel" class="nav nav-pills nav-stacked">
       						<li role="presentation"><a href="#">Canada</a></li>
       						<li role="presentation"><a href="#">Manitoba</a></li>
       						<li role="presentation" class="active"><a href="#">Churchill, Manitoba</a></li>
       					</ul>
               </div>
             </div>
-            <div class="panel panel-success">
+            <div class="panel panel-warning">
               <div class="panel-heading">
                  Current Ranking
               </div>
-              <div class="panel-body half-height">
-      					<h4>Solved <strong>24</strong> of 150 puzzles</h4>
-      					<h4><strong>Current Rank: </strong> Coyote</h4>
-      					<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Howl_%28cropped%29.jpg" />
+              <div class="panel-body half-height" style="overflow:hidden">
+                <div>
+        					<p>Solved <strong id="solved-puzzles">24</strong> of <span id="total-puzzles">150</span> puzzles</p>
+        					<p><strong>Current Rank: </strong> <span id="rank-name">Coyote</span></p>
+      					  <img id="rank-img" class="contained" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Howl_%28cropped%29.jpg" />
+                </div>
               </div>
             </div>
       </div>
       <div class="col-xs-9 small-pad">
-        <div class="panel panel-danger">
+        <div class="panel panel-danger" id="question-panel">
           <div class="panel-heading">
     				<h4>
-    					<strong>Your Next Challenge: </strong> This is the northernmost city in Canada that can be reached by rail. Navigate to this city's Wikipedia page from the Canada Wikipedia page in less than four links.
-    				</h4>
-    				<br/>
+    					<strong id="challenge-text">Your Next Challenge: </strong><span id="question-text">This is the northernmost city in Canada that can be reached by rail. Navigate to this city's Wikipedia page from the Canada Wikipedia page in less than four links. </span>
+              <br/><button id="next-challenge" class="btn btn-success" style="display: none"><span class="glyphicon glyphicon-arrow-right"></span> Go To Next Challenge </button>
+            </h4>
           </div>
           <div class="panel-body panel-body-webview">
               <div class=" webview-div" >
-                <button id="search-page-button" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-search"></span> Search This Page</button>
+                <button id="search-page-button" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-search"></span> Search Page</button>
                 <webview src="https://en.wikipedia.org/wiki/Canada" preload="stripPage.js"></webview>
               </div>
           </div>
@@ -54,6 +56,39 @@
 			</div>
 		</row>
 	</container>
+
+  <div id="overlay" class="overlay">
+    <a href="javascript:void(0)" class="closebtn">&times;</a>
+    <div class="overlay-content">
+      <div id="success-text" style="display: none">
+        <h2>
+          Great job, you did it! The answer was: <br/> <br/>
+          <strong><span id="answer-text"></span></strong>
+          <br/> <br/>
+          Close this dialog to read more about it and to start the next challenge.
+        </h2>
+        <br/> <br/> <br/> <br/>
+
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Bluenose_1921_by_MacAskill.jpg" style="width: 30%; height: 30%" />
+          <figcaption>The Bluenose schooner at the 1921 Nova Scotia Elimination Trials,
+            held off Halifax in October by W.R. MacAskill, Image hand-colourized by Mrs. Elva MacAskil. </figcaption>
+        </figure>
+      </div>
+      <div id="fail-text" style="display: none; color: white">
+        <h2>
+          Woops! You have run out of clicks and have not reached the answer to the puzzle yet! <br/><br/>
+          Rechart your expedition by going through your history and navigating to other pages instead.
+          <br/> <br/> <br/> <br/>
+        </h2>
+        <figure>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Manproposesgoddisposes.jpg" style="width: 50%; height: 50%" />
+          <figcaption>Man Proposes, God Disposes (1864) by Edwin Henry Landseer. <br/>
+          This was Landseer's depiction of the ultimate fate of the Franklin's lost expedition. </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
   </body>
 
   <script>
