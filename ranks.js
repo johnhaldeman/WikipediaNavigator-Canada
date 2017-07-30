@@ -17,11 +17,6 @@ module.exports.ranks =
 	"image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/River_Otter-27527.jpg"
 },
 {
-	"name": "Stellar Sea Lion",
-	"url": "https://en.wikipedia.org/wiki/Steller_sea_lion",
-	"image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Agattu_Island_Steller_Sea_Lion_bull.jpg"
-},
-{
 	"name": "White-Tailed Deer",
 	"url": "https://en.wikipedia.org/wiki/White-tailed_deer",
 	"image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/White-tailed_deer.jpg"

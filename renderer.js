@@ -9,8 +9,8 @@ let visitedURLs = ['https://en.wikipedia.org/wiki/Canada'];
 let targetURL = 'https://en.wikipedia.org/wiki/Churchill,_Manitoba';
 let currentQuestion = "";
 let maxURLs = 4;
-let currentIndex = 0;
-let rankStep = 1;
+let currentIndex = 48;
+let rankStep = 3;
 let search;
 
 function loadQuestion(index){
@@ -103,7 +103,8 @@ webview.addEventListener('dom-ready', () => {
     let challText = document.getElementById('challenge-text');
     challText.textContent = "Challenge Complete: "
 
-    document.getElementById('next-challenge').style.display = 'block';
+    if(currentIndex != questions.length - 1)
+      document.getElementById('next-challenge').style.display = 'block';
 
     maxURLs = 100;
   }
@@ -152,7 +153,20 @@ function openOverlay(type) {
       overlay.style.backgroundColor = "rgba(223, 240, 216, 0.95)";
       let answerText = document.getElementById("answer-text");
       answerText.textContent = webview.getTitle().replace(" - Wikipedia", "");;
-      document.getElementById("success-text").style.display = "block";
+
+      if(currentIndex == questions.length - 1){
+        document.getElementById("next-text").textContent = "Congratulations! You have completed Wiki-Navigator and found your way through the Northwest Passage!"
+        document.getElementById("success-img").src = "passage/end.jpg";
+        document.getElementById("success-img").style.width="30%";
+        document.getElementById("success-img").style.height="30%";
+        document.getElementById("success-img-caption").textContent = "Roald Amundsen's vessel Gjøa - The first vessel to navigate the Northwest Passage";
+        document.getElementById("success-text").style.display = "block";
+      }
+      else{
+        document.getElementById("success-img").src = "passage/" + (currentIndex + 1) + ".png";
+        document.getElementById("success-img-caption").textContent = "You have now completed " + (currentIndex + 1) + " of " + questions.length + " questions";
+        document.getElementById("success-text").style.display = "block";
+      }
   }
   else
     overlay.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
