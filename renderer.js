@@ -1,8 +1,12 @@
 const searchInPage = require('electron-in-page-search').default;
-const BrowserWindow = require('electron').remote.BrowserWindow;
 const path = require('path');
 const questions = require('./questions').questions;
 const ranks = require('./ranks').ranks;
+const fs = require('fs');
+
+const remote = require('electron').remote;
+const BrowserWindow = remote.BrowserWindow;
+const app = remote.app;
 
 const webview = document.querySelector('webview')
 let visitedURLs = ['https://en.wikipedia.org/wiki/Canada'];
@@ -21,9 +25,20 @@ function loadQuestion(index){
   maxURLs = questions[index].click_limit;
 }
 
-loadQuestion(currentIndex);
-let questText = document.getElementById('question-text');
-questText.textContent = currentQuestion;
+function saveProgress(){
+  let saveGame = {
+    currentIndex: currentIndex + 1
+  };
+  fs.writeFileSync(app.getPath('userData') + '/savegame.txt', JSON.stringify(saveGame), 'utf8');
+}
+
+function loadProgress() {
+  let saveGame = JSON.parse(fs.readFileSync(app.getPath('userData') + '/savegame.txt', 'utf8'));
+  if(!saveGame.currentIndex)
+    currentIndex = 0;
+  else
+    currentIndex = saveGame.currentIndex;
+}
 
 function drawHistory(){
   const panel = document.querySelector('#history-panel');
@@ -74,7 +89,15 @@ function removeAllChildren(element){
   }
 }
 
+loadProgress();
+
+loadQuestion(currentIndex);
+let questText = document.getElementById('question-text');
+questText.textContent = currentQuestion;
+
 refresh();
+
+
 
 webview.addEventListener('will-navigate', (event) => {
 
@@ -167,6 +190,8 @@ function openOverlay(type) {
         document.getElementById("success-img-caption").textContent = "You have now completed " + (currentIndex + 1) + " of " + questions.length + " questions";
         document.getElementById("success-text").style.display = "block";
       }
+
+      saveProgress();
   }
   else
     overlay.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
