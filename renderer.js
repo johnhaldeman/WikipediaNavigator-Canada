@@ -16,6 +16,7 @@ let maxURLs = 4;
 let currentIndex = 48;
 let rankStep = 3;
 let search;
+let hintsReceived = 0;
 
 function loadQuestion(index){
   currentQuestion = questions[index].question;
@@ -27,7 +28,16 @@ function loadQuestion(index){
 
 function saveProgress(){
   let saveGame = {
-    currentIndex: currentIndex + 1
+    currentIndex: currentIndex + 1,
+    hintsReceived: hintsReceived
+  };
+  fs.writeFileSync(app.getPath('userData') + '/savegame.txt', JSON.stringify(saveGame), 'utf8');
+}
+
+function saveHint(){
+  let saveGame = {
+    currentIndex: currentIndex,
+    hintsReceived: hintsReceived
   };
   fs.writeFileSync(app.getPath('userData') + '/savegame.txt', JSON.stringify(saveGame), 'utf8');
 }
@@ -38,6 +48,11 @@ function loadProgress() {
     currentIndex = 0;
   else
     currentIndex = saveGame.currentIndex;
+
+  if(!saveGame.hintsReceived)
+    hintsReceived = 0;
+  else
+    hintsReceived = saveGame.hintsReceived;
 }
 
 function drawHistory(){
@@ -70,12 +85,18 @@ function addHistoryLinkListener(element, elemNum){
 function refresh(){
    drawHistory();
    drawRank();
+   document.getElementById('give-hint').style.display = 'block';
 }
 
 function drawRank(){
-  let rankIndex = Math.floor(currentIndex / rankStep);
+  let hintModifier = Math.ceil(hintsReceived / 2);
+  let rankIndex = 0;
+  if(currentIndex >= hintModifier)
+    rankIndex = Math.floor((currentIndex - hintModifier) / rankStep);
+
   let rank = ranks[rankIndex];
 
+  document.getElementById("number-hints").textContent = hintsReceived;
   document.getElementById('solved-puzzles').textContent = currentIndex + 1;
   document.getElementById('total-puzzles').textContent = questions.length;
   document.getElementById('rank-name').textContent = rank.name;
@@ -126,6 +147,8 @@ webview.addEventListener('dom-ready', () => {
     let challText = document.getElementById('challenge-text');
     challText.textContent = "Challenge Complete: "
 
+    document.getElementById('give-hint').style.display = 'none';
+
     if(currentIndex != questions.length - 1)
       document.getElementById('next-challenge').style.display = 'block';
 
@@ -159,8 +182,24 @@ document.getElementById('next-challenge').addEventListener('click', () => {
   questText.textContent = currentQuestion;
 
   document.getElementById('next-challenge').style.display = 'none';
+  document.getElementById("hint-answer").style.display = 'none';
+    document.getElementById('give-hint').style.display = 'block';
 
   refresh();
+});
+
+document.getElementById('give-hint').addEventListener('click', () => {
+  hintsReceived++;
+  saveHint();
+
+  document.getElementById('give-hint').style.display = 'none';
+
+  document.getElementById("hint-answer").textContent = questions[currentIndex].title;
+  document.getElementById("hint-answer").style.display = 'block';
+
+  document.getElementById("number-hints").textContent = hintsReceived;
+
+  drawRank();
 });
 
 function openOverlay(type) {

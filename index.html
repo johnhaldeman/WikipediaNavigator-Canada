@@ -31,8 +31,9 @@
               </div>
               <div class="panel-body half-height" style="overflow:hidden">
                 <div>
-        					<p>Solved <strong id="solved-puzzles">24</strong> of <span id="total-puzzles">150</span> puzzles</p>
-        					<p><strong>Current Rank: </strong> <span id="rank-name">Coyote</span></p>
+        					<p><strong>Solved Puzzles:</strong> <span id="solved-puzzles">24</span> of <span id="total-puzzles">150</span><br/>
+          			  <strong>Hints Used: </strong> <span id="number-hints">0</span><br/>
+        					<strong>Current Rank: </strong> <span id="rank-name">Coyote</span></p>
       					  <img id="rank-img" class="contained" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Howl_%28cropped%29.jpg" />
                 </div>
               </div>
@@ -45,6 +46,8 @@
     					<strong id="challenge-text">Your Next Challenge: </strong><span id="question-text">This is the northernmost city in Canada that can be reached by rail. Navigate to this city's Wikipedia page from the Canada Wikipedia page in less than four links. </span>
               <br/><button id="next-challenge" class="btn btn-success" style="display: none"><span class="glyphicon glyphicon-arrow-right"></span> Go To Next Challenge </button>
             </h4>
+            <br/><button id="give-hint" class="btn btn-primary" style="display: block"><span class="glyphicon glyphicon-question-sign"></span> Reveal Answer (Affects Rank) </button>
+            <p id="hint-answer" style="display: none"></p>
           </div>
           <div class="panel-body panel-body-webview">
               <div class=" webview-div" >

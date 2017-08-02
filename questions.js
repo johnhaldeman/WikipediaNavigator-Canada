@@ -6,6 +6,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/West_Edmonton_Mall",
 
+	"title": "West Edmonton Mall",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "landmarks",
@@ -16,6 +18,8 @@ module.exports.questions =
 	"question": "This hotel near Quebec City is made of ice and takes approximately a month and a half for fifty workers to construct each year. Starting at Canada find it's Wikipedia entry in less than four links.",
 
 	"target": "https://en.wikipedia.org/wiki/Ice_Hotel_(Qu%C3%A9bec)",
+
+	"title": "Ice Hotel (Quebec)",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -28,6 +32,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Grey_Cup",
 
+	"title": "Grey Cup",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "sport",
@@ -38,6 +44,8 @@ module.exports.questions =
 	"question": "Four Canadian companies that produce this beverage are Molson, Labatt, Sleeman, and Steam Whistle. Navigate to the beaverage's wikipedia article in eight links from the Canada page.",
 
 	"target": "https://en.wikipedia.org/wiki/Beer",
+
+	"title": "Beer",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -50,6 +58,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Canadian_Red_Ensign",
 
+	"title": "Canadian Red Ensign",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -61,6 +71,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Washington,_D.C.",
 
+	"title": "Washington, D.C.",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -68,9 +80,11 @@ module.exports.questions =
 	"click_limit": 6
 },
 {
-	"question": "This, the largest French speaking city in Canada is the second-largest French Speaking city in the world after Paris. Navigate to it's page in one link from the Canada page.",
+	"question": "This, the largest French speaking city in Canada, is the second-largest French Speaking city in the world after Paris. Navigate to it's page in one link from the Canada page.",
 
 	"target": "https://en.wikipedia.org/wiki/Montreal",
+
+	"title": "Montreal",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -83,6 +97,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Kenojuak_Ashevak",
 
+	"title": "Kenojuak Ashevak",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "culture",
@@ -93,6 +109,8 @@ module.exports.questions =
 	"question": "This Canadian Hockey team from Manitoba represented Canada and won the first ever Olympic Gold in ice hockey. Navigate to their Wikipedia page from the Canada page in four links.",
 
 	"target": "https://en.wikipedia.org/wiki/Winnipeg_Falcons",
+
+	"title": "Winnipeg Falcons",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -105,6 +123,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/John_A._Macdonald",
 
+	"title": "John A. Macdonald",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -115,6 +135,8 @@ module.exports.questions =
 	"question": "This Canadian agronomist crossed 'Red Fife' with 'Hard Red Calcutta' to create the 'Marquis' wheat cultivar which greatly improved wheat production in the Canadian (and American) wheatbelt. Navigate to his Wikipedia entry from the Canada entry in ten links.",
 
 	"target": "https://en.wikipedia.org/wiki/Charles_E._Saunders",
+
+	"title": "Charles E. Saunders",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -127,6 +149,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/L%27Anse_aux_Meadows",
 
+	"title": "L'Anse aux Meadows",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -134,9 +158,11 @@ module.exports.questions =
 	"click_limit": 1
 },
 {
-	"question": "This pediatric surgeon born and educated in Montreal dedicated her professional career to working in Lacor Hospital (Northern Uganda) during Idi Amin's rise to power and subsequent overthrow, and mutiple rebelions. She died of AIDS contracted in the course of working in the hospital. She was inducted into the Canadian Medical Hall of Fame in 2001. Navigate to her Wikipedia page from the Canada page in 10 links.",
+	"question": "This pediatric surgeon born and educated in Montreal dedicated her professional career to working in Lacor Hospital (Northern Uganda) during Idi Amin's rise to power, subsequent overthrow, and mutiple rebelions. She died of AIDS contracted in the course of working in the hospital. She was inducted into the Canadian Medical Hall of Fame in 2001. Navigate to her Wikipedia page from the Canada page in 10 links.",
 
 	"target": "https://en.wikipedia.org/wiki/Lucille_Teasdale-Corti",
+
+	"title": "Lucille Teasdale-Corti",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -149,6 +175,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Norman_Bethune",
 
+	"title": "Norman Bethune",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -159,6 +187,8 @@ module.exports.questions =
 	"question": "This Canadian legal scholar, jurist, and human rights advocate was the author of the first draft of the Universal Declaration on Human Rights adopted by the UN. Navigate to his Wikipedia page from the Canada page in six links.",
 
 	"target": "https://en.wikipedia.org/wiki/John_Peters_Humphrey",
+
+	"title": "John Peters Humphrey",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -171,6 +201,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Sandford_Fleming",
 
+	"title": "Sandford Fleming",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -181,6 +213,8 @@ module.exports.questions =
 	"question": "He was a Ojibwe (Anishinaabe) First Nations boy who escaped from Cecilia Jeffrey Indian Residential School and proceeded to die of hunger and exposure. His death brought national attention to treatment of children in residential schools and a Canadian Government inquest into the matter. Navigate to his Wikipedia page from the Canada page in six links.",
 
 	"target": "https://en.wikipedia.org/wiki/Chanie_Wenjack",
+
+	"title": "Chanie Wenjack",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -193,6 +227,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Stratford_Festival",
 
+	"title": "Stratford Festival",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "culture",
@@ -203,6 +239,8 @@ module.exports.questions =
 	"question": "This festival in Quebec holds the record for largest jazz festival, attracting over 2 million attendees each year. Navigate to it's page in four links.",
 
 	"target": "https://en.wikipedia.org/wiki/Montreal_International_Jazz_Festival",
+
+	"title": "Montreal International Jazz Festival",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -215,6 +253,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Joseph-Armand_Bombardier",
 
+	"title": "Joseph-Armand Bombardier",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "culture",
@@ -225,6 +265,8 @@ module.exports.questions =
 	"question": "This is one of the five grand railway hotels still operating in Alberta along side the Palliser in Calgary, Hotel Macdonald in Edmonton, Chateau Lake Louise, and the Jasper Park Lodge. Navigate to it's page in six links.",
 
 	"target": "https://en.wikipedia.org/wiki/Banff_Springs_Hotel",
+
+	"title": "Banff Springs Hotel",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -237,6 +279,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Rideau_Canal",
 
+	"title": "Rideau Canal",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "geography",
@@ -248,6 +292,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Welland_Canal",
 
+	"title": "Welland Canal",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "geography",
@@ -255,9 +301,11 @@ module.exports.questions =
 	"click_limit": 6
 },
 {
-	"question": "The governor general of Canada chose not to user her reserve powers and decline the advice of the Prime Minister in the 2008-2009 parliamentary dispute that resulted in parliament being prorogued. These reserve powers have only been used twice in Canada's history. One of these times was when this governor general declined the advice of William Lyon Mackenzie King to disolve parliament. Navigate to his Wikipedia page from the Canada page in two links.",
+	"question": "The governor general of Canada chose not to use her reserve powers to decline the request of the Prime Minister in the 2008-2009 parliamentary dispute that resulted in parliament being prorogued. These reserve powers have only been used twice in Canada's history. One of these times was when this governor general declined the advice of William Lyon Mackenzie King to disolve parliament. Navigate to his Wikipedia page from the Canada page in two links.",
 
 	"target": "https://en.wikipedia.org/wiki/Julian_Byng,_1st_Viscount_Byng_of_Vimy",
+
+	"title": "Julian Byng, 1st Viscount Byng of Vimy",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -270,6 +318,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Margaret_Atwood",
 
+	"title": "Margaret Atwood",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -280,6 +330,8 @@ module.exports.questions =
 	"question": "This annual rodeo, exhibition and festival held every July in Alberta attracts over one million visitors per year. Navigate to it's page in four links",
 
 	"target": "https://en.wikipedia.org/wiki/Calgary_Stampede",
+
+	"title": "Calgary Stampede",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -292,6 +344,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1763)",
 
+	"title": "Treaty of Paris (1763)",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -302,6 +356,8 @@ module.exports.questions =
 	"question": "This name refers to the inhabitants and settlers that worked the parcels of land owned by a seigneur in the seigneurial system of New France. It is also a nick name for the Montreal Canadiens hockey team. Navigate to it's page in ten links.",
 
 	"target": "https://en.wikipedia.org/wiki/Habitants",
+
+	"title": "Habitants",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -314,6 +370,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Second_Battle_of_Ypres",
 
+	"title": "Second Battle of Ypres",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -324,6 +382,8 @@ module.exports.questions =
 	"question": "Canada is one of the world's largest producers of hydroelectric power. This dam in Northern Quebec, part of Hydro Quebec's James Bay project, is Canada's largest hydroelectric power station. Navigate to it's page in ten links.",
 
 	"target": "https://en.wikipedia.org/wiki/Robert-Bourassa_generating_station",
+
+	"title": "Robert-Bourassa generating station",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -336,6 +396,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Group_of_Seven_(artists)",
 
+	"title": "Group of Seven (artists)",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -346,6 +408,8 @@ module.exports.questions =
 	"question": "This group of women from Alberta, which included the British Empire's first female judge and the empire's first woman elected to a legislature, created a petition to ask the Supreme Court of Canada to answer the question, \"Does the word 'Persons' in Section 24 of the British North America Act, 1867, include female persons?\". Navigate to their page in ten links.",
 
 	"target": "https://en.wikipedia.org/wiki/The_Famous_Five_(Canada)",
+
+	"title": "The Famous Five (Canada)",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -358,6 +422,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Canadian_Pacific_Railway",
 
+	"title": "Canadian Pacific Railway",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -369,6 +435,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Halifax,_Nova_Scotia",
 
+	"title": "Halifax, Nova Scotia",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -376,9 +444,11 @@ module.exports.questions =
 	"click_limit": 3
 },
 {
-	"question": "During World War 2, the US Army Corps of Engineers built this 1,400 mile long highway of which 1,200 miles are on Canadian soil. After the war the road and other facilities in Canada were turned over to Canadian authorities. Navigate to it's page in five links.",
+	"question": "During World War 2, the US Army Corps of Engineers built this 1,400 mile long highway of which 1,200 miles are on Canadian soil. After the war the road and other all other facilities that were in Canada were turned over to Canadian authorities. Navigate to it's page in five links.",
 
 	"target": "https://en.wikipedia.org/wiki/Alaska_Highway",
+
+	"title": "Alaska_Highway",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -391,6 +461,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Alexander_Mackenzie_(explorer)",
 
+	"title": "Alexander Mackenzie (explorer)",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -402,6 +474,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Royal_St._John%27s_Regatta",
 
+	"title": "Royal St. John's Regatta",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -409,9 +483,11 @@ module.exports.questions =
 	"click_limit": 5
 },
 {
-	"question": "This marathon's course is partly in Michigan and partly in Ontario and crosses both an international bridge and an international tunnel. The tunnel allows the marathon to boast that it has the only official underwater international mile in the world. Navigate to it's page from the Canada page in eight links.",
+	"question": "This marathon's course is partly in Michigan and partly in Ontario and crosses both an international bridge and an international tunnel. The tunnel section allows the marathon to boast that it has the only official underwater mile in the world. Navigate to it's page from the Canada page in eight links.",
 
 	"target": "https://en.wikipedia.org/wiki/Detroit_Free_Press_Marathon",
+
+	"title": "Detroit Free Press Marathon",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -424,6 +500,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Greater_Sudbury",
 
+	"title": "Greater Sudbury",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
@@ -434,6 +512,8 @@ module.exports.questions =
 	"question": "This area in Nunavut is the northernmost permanently inhabited place in the world. Navigate to it's page in four links.",
 
 	"target": "https://en.wikipedia.org/wiki/Alert,_Nunavut",
+
+	"title": "Alert, Nunavut",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -446,6 +526,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Senate_of_Canada",
 
+	"title": "Senate of Canada",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "civics",
@@ -456,6 +538,8 @@ module.exports.questions =
 	"question": "This \"Polar Bear Capital of the World\" is the northernmost city in Canada that can be reached by passenger rail. Navigate to this city's Wikipedia page from the Canada Wikipedia page in less than four links.",
 
 	"target": "https://en.wikipedia.org/wiki/Churchill,_Manitoba",
+
+	"title": "Churchill, Manitoba",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -468,6 +552,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Michael_J._Fox",
 
+	"title": "Michael J. Fox",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "culture",
@@ -478,6 +564,8 @@ module.exports.questions =
 	"question": "(At the time of this question being written - July, 2017) this natural disaster was the most expensive ever for Canada in terms of insurance losses but there were no direct fatalities and zero injuries. Navigate to the Wikipedia page for this disaster in from the Canada Wikipedia page in less than six links.",
 
 	"target": "https://en.wikipedia.org/wiki/2016_Fort_McMurray_Wildfire",
+
+	"title": "2016 Fort McMurray Wildfire",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -490,6 +578,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Middle_Island_(Lake_Erie)",
 
+	"title": "Middle Island (Lake Erie)",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "geography",
@@ -500,6 +590,8 @@ module.exports.questions =
 	"question": "This Métis leader of the Red River Rebellion was a key figure in negotiating the terms that established Manitoba as a province. Navigate to that man's Wikipedia entry from the Canada entry in 4 links",
 
 	"target": "https://en.wikipedia.org/wiki/Louis_Riel",
+
+	"title": "Louis Riel",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -512,6 +604,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/PotashCorp",
 
+	"title": "PotashCorp",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "economy",
@@ -522,6 +616,8 @@ module.exports.questions =
 	"question": "This was the host city of the 2010 Winter Olympic Games. Navigate to that city's Wikipedia entry from the Canada entry in 3 links",
 
 	"target": "https://en.wikipedia.org/wiki/Vancouver",
+
+	"title": "Vancouver",
 
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
@@ -534,6 +630,8 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/St_George%27s_Cricket_Club",
 
+	"title": "St George's Cricket Club",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "sport",
@@ -545,15 +643,13 @@ module.exports.questions =
 
 	"target": "https://en.wikipedia.org/wiki/Tommy_Douglas",
 
+	"title": "Tommy Douglas",
+
 	"start": "https://en.wikipedia.org/wiki/Canada",
 
 	"category": "history",
 
 	"click_limit": 6
 }
-
-
-
-
 
 ]
