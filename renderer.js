@@ -1,8 +1,7 @@
 const searchInPage = require('electron-in-page-search').default;
 const path = require('path');
-const questions = require('./questions').questions;
-const ranks = require('./ranks').ranks;
 const fs = require('fs');
+const http = require('http');
 
 const remote = require('electron').remote;
 const BrowserWindow = remote.BrowserWindow;
@@ -17,6 +16,9 @@ let currentIndex = 48;
 let rankStep = 3;
 let search;
 let hintsReceived = 0;
+
+let questions = {}; //require('./questions').questions;
+let ranks = {}; //require('./ranks').ranks;
 
 function loadQuestion(index){
   currentQuestion = questions[index].question;
@@ -112,13 +114,49 @@ function removeAllChildren(element){
 
 loadProgress();
 
-loadQuestion(currentIndex);
-let questText = document.getElementById('question-text');
-questText.textContent = currentQuestion;
 
-refresh();
+http.get('http://localhost/wikinavcanada/questions.json', (res) => {
+  const { statusCode } = res;
+  const contentType = res.headers['content-type'];
+
+  let error;
+  if (statusCode !== 200) {
+    error = new Error('Request Failed.\n' +
+                      `Status Code: ${statusCode}`);
+  } else if (!/^application\/json/.test(contentType)) {
+    error = new Error('Invalid content-type.\n' +
+                      `Expected application/json but received ${contentType}`);
+  }
+  if (error) {
+    console.log(error.message);
+    res.resume();
+    return;
+  }
+
+  res.setEncoding('utf8');
+  let rawData = '';
+  res.on('data', (chunk) => { rawData += chunk; });
+  res.on('end', () => {
+    try {
+      const parsedData = JSON.parse(rawData);
+      questions = parsedData.questions;
+      ranks = parsedData.ranks;
+      initialize();
+    } catch (e) {
+      console.error(e.message);
+    }
+  });
+}).on('error', (e) => {
+  console.error(`Got error: ${e.message}`);
+});
 
 
+function initialize(){
+  loadQuestion(currentIndex);
+  let questText = document.getElementById('question-text');
+  questText.textContent = currentQuestion;
+  refresh();
+};
 
 webview.addEventListener('will-navigate', (event) => {
 
