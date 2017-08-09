@@ -45,16 +45,25 @@ function saveHint(){
 }
 
 function loadProgress() {
-  let saveGame = JSON.parse(fs.readFileSync(app.getPath('userData') + '/savegame.txt', 'utf8'));
-  if(!saveGame.currentIndex)
-    currentIndex = 0;
-  else
-    currentIndex = saveGame.currentIndex;
+  let path = app.getPath('userData') + '/savegame.txt';
 
-  if(!saveGame.hintsReceived)
+  if(fs.existsSync(path)){
+    let saveGame = JSON.parse(fs.readFileSync(path, 'utf8'));
+    if(!saveGame.currentIndex)
+      currentIndex = 0;
+    else
+      currentIndex = saveGame.currentIndex;
+
+    if(!saveGame.hintsReceived)
+      hintsReceived = 0;
+    else
+      hintsReceived = saveGame.hintsReceived;
+  }
+  else{
+    currentIndex = 0;
     hintsReceived = 0;
-  else
-    hintsReceived = saveGame.hintsReceived;
+    saveProgress();
+  }
 }
 
 function drawHistory(){
@@ -115,7 +124,7 @@ function removeAllChildren(element){
 loadProgress();
 
 
-http.get('http://localhost/wikinavcanada/questions.json', (res) => {
+http.get('http://assets.wikipedianavigator.com/questions.json', (res) => {
   const { statusCode } = res;
   const contentType = res.headers['content-type'];
 
@@ -158,10 +167,10 @@ function initialize(){
   refresh();
 };
 
+let navCheck = false;
 webview.addEventListener('will-navigate', (event) => {
 
-  if(maxURLs == visitedURLs.length){
-    console.log('oops, reached max');
+  if(maxURLs == visitedURLs.length - 1){
     webview.src = visitedURLs[visitedURLs.length - 1];
     openOverlay("fail");
     return;
@@ -172,7 +181,6 @@ webview.addEventListener('will-navigate', (event) => {
 })
 
 webview.addEventListener('dom-ready', () => {
-  //webview.openDevTools();
   search = searchInPage(webview);
 
   if(webview.src.toUpperCase() == targetURL.toUpperCase()){

@@ -13,8 +13,12 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1200, height: 900, icon: 'mapleLeaf.png'})
-  //mainWindow.setMenu(null);
+  mainWindow = new BrowserWindow({
+    width: 1200,
+    height: 900,
+    icon: path.join(__dirname, 'icons', 'png', 'WikiNavCanLogo.png_64x64.png')
+  })
+  mainWindow.setMenu(null);
 
 
   // and load the index.html of the app.

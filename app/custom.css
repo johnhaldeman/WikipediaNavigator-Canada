@@ -8,7 +8,7 @@ webview{
 }
 
 .webview-div {
-	height: calc(100vh - 276px);
+	height: calc(100vh - 255px);
 }
 
 .small-pad{
