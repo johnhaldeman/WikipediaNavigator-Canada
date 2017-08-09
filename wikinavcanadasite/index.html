@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WikiNavigator Canada</title>
+    <link rel="stylesheet" href="http://assets.wikipedianavigator.com/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://assets.wikipedianavigator.com/bulma.css">
+    <link rel="icon" type="image/png" href="http://assets.wikipedianavigator.com/favicon.png" />
+  </head>
+  <body>
+    <nav class="navbar is-transparent">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="http://assets.wikipedianavigator.com/WikiNavCanLogoSmall.png" alt="Wiki-Navigator Canada" width="112" height="28">
+        </a>
+      </div>
+          <a class="navbar-item " href="howto.html">
+            How to Play
+          </a>
+        <div class="navbar-end">
+          <div class="navbar-item">
+              <p class="control">
+                <a class="button is-info" href="download.html">
+                  <span class="icon">
+                    <i class="fa fa-download"></i>
+                  </span>
+                  <span>Download Game</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+	<section class="hero is-dark is-bold">
+	  <div class="hero-body">
+  		<div class="container">
+        <div class="columns is-mobile is-vcentered">
+          <div class="column is-10">
+      		  <h1 class="title">
+      			     WikiNavigator - Voyageur Edition (Canada)
+      		  </h1>
+      		  <h2 class="subtitle">
+      			    Answer questions about Canada by navigating Wikipedia and chart your way through the Northwest Passage.
+      		  </h2>
+          </div>
+          <div class="column">
+            <img src="http://assets.wikipedianavigator.com/WikiNavCanLogo.png" />
+          </div>
+    		</div>
+      </div>
+	  </div>
+	</section>
+	<section class="section">
+	  <div class="container">
+      <h1 class="title">
+        Gameplay Images:
+      </h1>
+      <div class="columns">
+        <div class="column" >
+          <div class="box" onclick="addIsActive('navigatingModal')" style="cursor: pointer">
+            <figure class="image 4by3">
+              <img src="http://assets.wikipedianavigator.com/navigatingThumb.png">
+            </figure>
+          </div>
+          <div class="modal" id="navigatingModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <p class="image is-4by3">
+                <img src="http://assets.wikipedianavigator.com/navigating.png" onclick="remIsActive('navigatingModal')">
+              </p>
+            </div>
+            <button class="modal-close is-large" onclick="remIsActive('navigatingModal')"></button>
+          </div>
+        </div>
+        <div class="column" >
+          <div class="box" onclick="addIsActive('CorrectAnswerModal')" style="cursor: pointer">
+            <figure class="image 4by3">
+              <img src="http://assets.wikipedianavigator.com/CorrectAnswerThumb.png">
+            </figure>
+          </div>
+          <div class="modal" id="CorrectAnswerModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <p class="image is-4by3">
+                <img src="http://assets.wikipedianavigator.com/CorrectAnswer.png" onclick="remIsActive('CorrectAnswerModal')">
+              </p>
+            </div>
+            <button class="modal-close is-large" onclick="remIsActive('CorrectAnswerModal')"></button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box" onclick="addIsActive('OutOfClicksModal')" style="cursor: pointer">
+            <figure class="image 4by3">
+              <img src="http://assets.wikipedianavigator.com/OutOfClicksThumb.png">
+            </figure>
+          </div>
+          <div class="modal" id="OutOfClicksModal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <p class="image is-4by3">
+                <img src="http://assets.wikipedianavigator.com/OutOfClicks.png" onclick="remIsActive('OutOfClicksModal')">
+              </p>
+            </div>
+            <button class="modal-close is-large" onclick="remIsActive('OutOfClicksModal')"></button>
+          </div>
+        </div>
+    	</div>
+    </div>
+	</section>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>WikiNavigator: Canada</strong> by John Haldeman <a href="http://github.com/johnhaldeman"><i class="fa fa-github"></i></a> <a href="https://www.linkedin.com/in/john-haldeman-1a106234/"><i class="fa fa-linkedin-square"></i></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script>
+  function addIsActive(id){
+    document.getElementById(id).className  += ' is-active'
+  }
+  function remIsActive(id){
+    document.getElementById(id).className = document.getElementById(id).className.replace(/\bis-active\b/, '');
+  }
+
+</script>
+
+</html>
