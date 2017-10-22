@@ -15,3 +15,8 @@ fonts/glyphicons-halflings-regular.eot
 fonts/glyphicons-halflings-regular.ttf
 
 out/
+build/packageWinStore.bat
+build/packageWinApp.bat
+AppXManifest.xml
+build/makeRest.bat
+wikinavcanadasite/fbshare/

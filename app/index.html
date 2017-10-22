@@ -31,7 +31,8 @@
                 <div>
         					<p><strong>Solved Puzzles:</strong> <span id="solved-puzzles">loading</span> of <span id="total-puzzles">loading</span><br/>
           			  <strong>Hints Used: </strong> <span id="number-hints">loading</span><br/>
-        					<strong>Current Rank: </strong> <span id="rank-name">loading</span></p>
+                  <strong>Skipped: </strong> <span id="number-skipped">loading</span><br/>
+        					<strong>Current Rank: </strong> <span id="rank-name">loading</span> &nbsp;<button id="share_rank" type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-share"></span> Share</button></p>
       					  <img id="rank-img" class="contained" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Howl_%28cropped%29.jpg" />
                 </div>
               </div>
@@ -43,9 +44,11 @@
     				<h4>
     					<strong id="challenge-text">Your Next Challenge: </strong><span id="question-text">Loading.... </span>
               <br/><button id="next-challenge" class="btn btn-success" style="display: none"><span class="glyphicon glyphicon-arrow-right"></span> Go To Next Challenge </button>
+              <button id="start-from-scratch" class="btn btn-success" style="display: none"><span class="glyphicon glyphicon-arrow-right"></span> Start from Beginning </button>
+              <button id="give-hint" class="btn btn-primary" style="display: inline-block"><span class="glyphicon glyphicon-question-sign"></span> Reveal Answer (Affects Rank) </button>
+              <button id="skip-question" class="btn btn-primary" style="display: inline-block"><span class="glyphicon glyphicon-forward"></span> Skip Question </button>
+              <p id="hint-answer" style="display: none"></p>
             </h4>
-            <br/><button id="give-hint" class="btn btn-primary" style="display: block"><span class="glyphicon glyphicon-question-sign"></span> Reveal Answer (Affects Rank) </button>
-            <p id="hint-answer" style="display: none"></p>
           </div>
           <div class="panel-body panel-body-webview">
               <div class=" webview-div" >
@@ -53,6 +56,7 @@
                 <webview src="https://en.wikipedia.org/wiki/Canada" preload="stripPage.js"></webview>
               </div>
           </div>
+          <p><strong>This Version of WikiNavigator-Canada is a pre-release beta! Please help us make it better by taking a survey <a href="#" id="survey-link">here</a>!</strong> <br/></p>
         </div>
 			</div>
 		</row>

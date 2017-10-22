@@ -19,6 +19,7 @@ function createWindow () {
     icon: path.join(__dirname, 'icons', 'png', 'WikiNavCanLogo.png_64x64.png')
   })
   mainWindow.setMenu(null);
+  mainWindow.maximize();
 
 
   // and load the index.html of the app.
