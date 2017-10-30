@@ -20,3 +20,4 @@ build/packageWinApp.bat
 AppXManifest.xml
 build/makeRest.bat
 wikinavcanadasite/fbshare/
+app/
